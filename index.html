@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -7,7 +8,7 @@
     <link rel="apple-touch-icon" href="test.png" sizes="57x57">
     <title>arly</title>
     <meta name="description" content="位置情報共有アプリ">
-    
+
     <script>
         var num = 0;
         var watch_id;
@@ -40,14 +41,14 @@
             document.getElementById('position_view').innerHTML = geo_text;
 
             var target = document.getElementById("sample2")
-            target.href = "mailto:aru67ly@gmail.com?subject=位置情報共有&body=" + "位置情報の共有メールです！" + "取得時刻" + date.toLocaleString() + "   " + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
+            target.href = "mailto:aru67ly@gmail.com?subject=位置情報共有&body=" + "位置情報の共有メールです！%0D%0A" + "取得時刻%0D%0A" + date.toLocaleString() + "%0D%0A位置情報%0D%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
 
             var target = document.getElementById("sample3")
             target.href = "https://twitter.com/intent/tweet?text=私は今ここにいます！！%0Aby%20arly%20%401l5%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
-            
+
             var target = document.getElementById("sample")
             target.href = "https://line.naver.jp/R/msg/text/私は今ここにいます！！%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
-            
+
             var target = document.getElementById("sample4")
             target.href = "mailto:aru67ly@gmail.com?subject=チャット&body=" + "トーク内容を入力してください%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A" + "送信時刻%0D%0A" + date.toLocaleString() + "%0D%0A送信場所%0D%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
 
@@ -55,8 +56,9 @@
         }
     </script>
 </head>
+
 <body>
-    <img src="https://media.discordapp.net/attachments/1023210503968931860/1030861015459565749/unknown.png"style="width: 100%;">
+    <img src="https://media.discordapp.net/attachments/1023210503968931860/1030861015459565749/unknown.png" style="width: 100%;">
     <font size="6"><button onclick="test()" style="width: 100%; padding: 40px; background-color:#7fffd4; font-size: 200%;">位置情報の取得</button></font>
     <br>
     <br>
@@ -68,10 +70,14 @@
     <br>
     <br>
     <br>
-<font size="6"><a id="sample" target="_blank" href='https://aru.pw' style="width: 100%; padding: 44px; background-color:#7fffd4; font-size: 150%;">LINEで位置情報を共有</a></font>
-<font size="6"><a id="sample4" target="_blank" href='https://aru.pw' style="width: 100%; padding: 44px; background-color:#7fffd4; font-size: 150%;">チャット送信</a></font>
-<font size="7"><p>あなたの位置情報</p></font>
-    <font size="20"><p><pre id="position_view"></pre></p></font>  
+    <font size="6"><a id="sample" target="_blank" href='https://aru.pw' style="width: 100%; padding: 44px; background-color:#7fffd4; font-size: 150%;">LINEで位置情報を共有</a></font>
+    <font size="6"><a id="sample4" target="_blank" href='https://aru.pw' style="width: 100%; padding: 44px; background-color:#7fffd4; font-size: 150%;">チャット送信</a></font>
+    <font size="7">
+        <p>あなたの位置情報</p>
+    </font>
+    <font size="20">
+        <p><pre id="position_view"></pre></p>
+    </font>
 </body>
-</html>
 
+</html>
