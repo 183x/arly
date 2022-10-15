@@ -7,6 +7,7 @@
     <link rel="apple-touch-icon" href="test.png" sizes="57x57">
     <title>arly</title>
     <meta name="description" content="位置情報共有アプリ">
+    
     <script>
         var num = 0;
         var watch_id;
@@ -47,17 +48,15 @@
             target.href = "https://twitter.com/intent/tweet?text=私は今ここにいます！！%0Aby%20arly%20%401l5%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
             
             var target = document.getElementById("sample")
-            target.href = "https://www.google.co.jp/maps/search/近くの駅/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
-
-            var target = document.getElementById("sample4")
-            target.href = "https://www.google.co.jp/maps/search/近くのコンビニ/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
+            target.href = "https://line.naver.jp/R/msg/text/私は今ここにいます！！%0A" + "https://www.google.co.jp/maps/@" + position.coords.latitude + "," + position.coords.longitude + ",19z"
+            
 
         }
     </script>
 </head>
 <body>
     <img src="https://media.discordapp.net/attachments/1023210503968931860/1030861015459565749/unknown.png"style="width: 100%;">
-    <font size="6"><button onclick="test()" style="width: 100%; padding: 40px; background-color:#7fffd4; font-size: 200%;">位置情報を確認</button></font>
+    <font size="6"><button onclick="test()" style="width: 100%; padding: 40px; background-color:#7fffd4; font-size: 200%;">位置情報の取得</button></font>
     <br>
     <br>
     <br>
@@ -68,10 +67,9 @@
     <br>
     <br>
     <br>
-<font size="6"><a id="sample" target="_blank" href='https://aru.pw' style="width: 100%; padding: 48px; background-color:#7fffd4; font-size: 150%;">周辺の駅を検索</a></font>
-<font size="6"><a id="sample4" target="_blank" href='https://aru.pw' style="width: 100%; padding: 48px; background-color:#7fffd4; font-size: 150%;">近くのコンビニ検索</a></font>
-    <font size="7"><p>あなたの位置情報</p></font>
-    <font size="20"><p><pre id="position_view"></pre></p></font>
+<font size="6"><a id="sample" target="_blank" href='https://aru.pw' style="width: 100%; padding: 48px; background-color:#7fffd4; font-size: 150%;">LINEで位置情報を共有</a></font>
+<font size="7"><p>あなたの位置情報</p></font>
+    <font size="20"><p><pre id="position_view"></pre></p></font>  
 </body>
 </html>
 
